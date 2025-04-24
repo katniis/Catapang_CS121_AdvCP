@@ -1,3 +1,5 @@
+from abc import ABC, abstractmethod
+
 class BankAccount():
     def __init__ (self, account_number, balance):
         self._account_number = account_number
@@ -10,13 +12,16 @@ class BankAccount():
     @property
     def balance(self):
         return self._balance
-    
+        
+    @abstractmethod
     def deposit(self, amount):
         pass
-
+        
+    @abstractmethod
     def withdraw (self, amount):
         pass
-
+        
+    @abstractmethod
     def display_account_type(self):
         pass
 
